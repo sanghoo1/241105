@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열Ex2</title>
+    <style>
+      .btn{
+        border: 3px solid #000;
+        display: inline-block;
+        color:  inherit;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 6px 20px;
+      }
+      .btn:hover{
+        background-color: #000;
+        color: #fff;
+      }
+    </style>
+</head>
+<body>
+  <h3 class="btn" onclick="today()">버튼</h3>
+
+  <script>
+    
+    const today = function(){
+     // console.log( new Date().getDay());
+     /* const now = new Date().getDay(); //요일 0일요일 ~ 6 토요일
+      let day = '';
+      switch(now){
+        case 0:
+          day = '일';
+          break; 
+          case 1:
+          day = '월';
+          break;
+          case 2:
+          day = '화';
+          break;
+          case 3:
+          day = '수';
+          break;
+          case 4:
+          day = '목';
+          break;
+          case 5:
+          day = '금';
+          break;
+          case 6:
+          day = '토';
+          break;
+      } */
+
+      const day = ['일','월','화','수','목','금','토'];
+      const now = new Date().getDay();
+
+      
+      document.body.innerHTML += `<h4>오늘의 요일은 ${day[now]}요일 입니다.</h4>`
+
+     
+    }
+  </script>
+</body>
+</html>
